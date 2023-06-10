@@ -2,13 +2,23 @@
   "name": "@oconr/react-json-view",
   "version": "1.0.0",
   "description": "Interactive React component for displaying JavaScript arrays and JSON objects.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "Ryan O'Connor",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oconr/react-json-view.git"
+  },
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "build": "npm run build:esm && npm run build:cjs"
   },
   "keywords": [
     "react",
@@ -16,15 +26,30 @@
     "view",
     "next",
     "nextjs",
-    "typescript"
+    "typescript",
+    "npm"
   ],
-  "author": "Ryan O'Connor",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/oconr/react-json-view/issues"
   },
   "homepage": "https://github.com/oconr/react-json-view#readme",
   "publishConfig": {
     "@oconr:registry": "https://npm.pkg.github.com"
-  }
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.10",
+    "@types/react-dom": "^18.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.63.3",
+    "typescript": "^5.1.3",
+    "vitest": "^0.32.0"
+  },
+  "peerDependencies": {
+    "react": ">= 18.0.0 < 2",
+    "react-dom": ">= 18.0.0 < 2"
+  },
+  "files": [
+    "/lib"
+  ]
 }

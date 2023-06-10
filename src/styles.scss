@@ -1,0 +1,117 @@
+.jsonView {
+    display: block;
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: hidden;
+    .outer {
+        transform: translateX(-35px);
+    }
+    .line, .p, .feet {
+        position: relative;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        padding: 2px 0;
+        &.line {
+            padding: 0;
+            &.deleted {
+                background: rgba(#ff6f6f, 0.3);
+            }
+            &.added {
+                background: rgba(#3eb93e, 0.3);
+            }
+            .jsonMark {
+                position: absolute;
+                left: -30px;
+                top: 2px;
+                text-indent: 0;
+                font-size: 12px;
+                color: #545454;
+                z-index: 5;
+                user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -webkit-user-select: none;
+            }
+            .typeMark {
+                position: absolute;
+                left: 5px;
+                top: 3px;
+                width: 10px;
+                height: 15px;
+                z-index: 5;
+                text-indent: 0;
+                &.added {
+                    content: '+';
+                    color: #3eb93e;
+                }
+                &.deleted {
+                    content: '-';
+                    color: #ff6f6f;
+                }
+            }
+            .jsonContent {
+                font-size: 14px;
+                .jsonKey {
+                    font-size: 15px;
+                    color: #5cadff;
+                }
+                .items {
+                    color: #b1b1b1;
+                }
+                .comma {
+                    color: #5cadff;
+                }
+                .number {
+                    color: #ae81ff;
+                }
+                .string {
+                    color: #a6e22e;
+                }
+                .null, .boolean, .undefined, .regex, .date, .set, .map, .error, .symbol, .function {
+                    background-color: #f7f7f7;
+                    border-radius: 3px;
+                    padding: 0px 2px;
+                    border: 1px solid #dedede;
+                }
+                .null {
+                    color: #66d9ef;
+                }
+                .boolean {
+                    color: #6f73ff;
+                }
+                .undefined {
+                    color: #f92672;
+                }
+                .regex {
+                    color: #2ea021;
+                }
+                .date {
+                    color: #09d3ac;
+                }
+                .set, .map {
+                    color: #f56847;
+                }
+                .error {
+                    color: #afafaf;
+                }
+                .symbol {
+                    color: #fd3db8;
+                }
+                .function {
+                    color: #a2af3d;
+                }
+            }
+        }
+        &.p {
+            cursor: pointer;
+        }
+    }
+
+    .jsonPt {
+        color: #5cadff;
+    }
+}
