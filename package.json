@@ -1,0 +1,27 @@
+{
+  "name": "@oconr/react-json-view",
+  "version": "1.0.0",
+  "description": "Interactive React component for displaying JavaScript arrays and JSON objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oconr/react-json-view.git"
+  },
+  "keywords": [
+    "react",
+    "json",
+    "view",
+    "next",
+    "nextjs",
+    "typescript"
+  ],
+  "author": "Ryan O'Connor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oconr/react-json-view/issues"
+  },
+  "homepage": "https://github.com/oconr/react-json-view#readme"
+}
